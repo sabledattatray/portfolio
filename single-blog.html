@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Center a Div Vertically and Horizontally in CSS - Stack Overflow Blog</title>
+    <style>
+        /* Stack Overflow's color scheme */
+        :root {
+            --white: #ffffff;
+            --black: #0c0d0e;
+            --orange: #f48024;
+            --blue: #0077cc;
+            --light-blue: #e1ecf4;
+            --dark-blue: #2b2d6e;
+            --gray: #6a737c;
+            --light-gray: #e4e6e8;
+            --dark-gray: #3b4045;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: var(--black);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        .blog-post-header {
+            margin-bottom: 24px;
+        }
+        
+        .blog-post-title {
+            font-size: 27px;
+            font-weight: 400;
+            margin: 0 0 8px 0;
+        }
+        
+        .blog-post-meta {
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+        
+        .blog-post-image {
+            width: 100%;
+            height: 300px;
+            background-color: var(--light-gray);
+            margin-bottom: 24px;
+        }
+        
+        .blog-post-content {
+            margin-bottom: 40px;
+        }
+        
+        .blog-post-content h2 {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 24px 0 16px 0;
+        }
+        
+        .blog-post-content p {
+            margin-bottom: 16px;
+        }
+        
+        .blog-post-content pre {
+            background-color: #f6f6f6;
+            padding: 16px;
+            border-radius: 3px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+        
+        .blog-post-content code {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+        
+        .blog-post-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .blog-post-tag {
+            background-color: var(--light-blue);
+            color: var(--blue);
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        
+        .blog-post-footer {
+            border-top: 1px solid var(--light-gray);
+            padding-top: 24px;
+        }
+        
+        .author-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .author-avatar {
+            width: 64px;
+            height: 64px;
+            background-color: var(--light-gray);
+            border-radius: 3px;
+            margin-right: 16px;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .author-bio {
+            color: var(--gray);
+            font-size: 13px;
+        }
+        
+        .related-posts {
+            margin-top: 40px;
+        }
+        
+        .related-posts h3 {
+            font-size: 19px;
+            font-weight: 400;
+            margin: 0 0 16px 0;
+        }
+        
+        .related-post {
+            margin-bottom: 16px;
+        }
+        
+        .related-post a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blog-post-header">
+            <h1 class="blog-post-title">How to Center a Div Vertically and Horizontally in CSS</h1>
+            <div class="blog-post-meta">Posted 2 days ago by John Doe · 5 min read</div>
+            <div class="blog-post-tags">
+                <span class="blog-post-tag">css</span>
+                <span class="blog-post-tag">flexbox</span>
+                <span class="blog-post-tag">layout</span>
+            </div>
+        </div>
+        
+        <div class="blog-post-image"></div>
+        
+        <div class="blog-post-content">
+            <p>Centering elements in CSS has historically been a challenge for developers, but modern CSS has introduced several reliable methods to achieve perfect centering both vertically and horizontally. In this post, we'll explore the most effective techniques.</p>
+            
+            <h2>1. Flexbox Method (Recommended)</h2>
+            <p>The flexbox layout module provides the most straightforward way to center elements:</p>
+            
+            <pre><code>.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the container takes full viewport height */
+}</code></pre>
+            
+            <p>This method works by:</p>
+            <ul>
+                <li>Creating a flex container with <code>display: flex</code></li>
+                <li>Centering horizontally with <code>justify-content: center</code></li>
+                <li>Centering vertically with <code>align-items: center</code></li>
+            </ul>
+            
+            <h2>2. CSS Grid Method</h2>
+            <p>CSS Grid offers an even simpler syntax for centering:</p>
+            
+            <pre><code>.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}</code></pre>
+            
+            <p>The <code>place-items</code> property is a shorthand for both <code>align-items</code> and <code>justify-items</code>.</p>
+            
+            <h2>3. Absolute Positioning Method</h2>
+            <p>For legacy support or special cases, you can use absolute positioning:</p>
+            
+            <pre><code>.container {
+  position: relative;
+  height: 100vh;
+}
+
+.centered-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}</code></pre>
+            
+            <p>This technique works by:</p>
+            <ul>
+                <li>Positioning the element at 50% from top and left</li>
+                <li>Using transform to adjust for the element's own dimensions</li>
+            </ul>
+            
+            <h2>Browser Support Considerations</h2>
+            <p>While flexbox and grid are supported in all modern browsers, if you need to support older browsers like IE11:</p>
+            <ul>
+                <li>Flexbox works in IE11 but with some bugs</li>
+                <li>Grid has limited support in IE11 (uses older syntax)</li>
+                <li>Absolute positioning works in all browsers</li>
+            </ul>
+            
+            <h2>Conclusion</h2>
+            <p>For most modern applications, the flexbox method provides the best combination of simplicity and reliability. The grid method is even more concise but has slightly less browser support. Reserve absolute positioning for cases where you need to support very old browsers or have specific positioning requirements.</p>
+        </div>
+        
+        <div class="blog-post-footer">
+            <div class="author-info">
+                <div class="author-avatar"></div>
+                <div>
+                    <div class="author-name">John Doe</div>
+                    <div class="author-bio">Frontend developer and CSS enthusiast with 10 years of experience building responsive web applications.</div>
+                </div>
+            </div>
+            
+            <div class="related-posts">
+                <h3>Related Posts</h3>
+                <div class="related-post"><a href="#">Mastering CSS Flexbox: A Complete Guide</a></div>
+                <div class="related-post"><a href="#">CSS Grid Layout: Practical Examples</a></div>
+                <div class="related-post"><a href="#">Responsive Design Techniques for 2023</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

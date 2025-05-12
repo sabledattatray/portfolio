@@ -1,0 +1,143 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-container {
+        gap: 15px;
+    }
+    
+    .left-sidebar {
+        flex: 0 0 160px;
+    }
+    
+    .right-sidebar {
+        flex: 0 0 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .search-container {
+        margin-left: 0;
+    }
+    
+    .right-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .user-controls .btn {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    
+    .content-container {
+        flex-direction: column;
+    }
+    
+    .left-sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar-nav {
+        position: static;
+    }
+    
+    .sidebar-nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+    
+    .sidebar-nav li {
+        margin-bottom: 0;
+    }
+    
+    .sidebar-nav a {
+        padding: 6px 8px;
+    }
+    
+    .main-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-section-header h1 {
+        margin-bottom: 10px;
+    }
+    
+    .questions-filter {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 15px;
+    }
+    
+    .filter-buttons {
+        display: inline-block;
+    }
+    
+    .question {
+        flex-direction: column;
+    }
+    
+    .question-stats {
+        flex: 0 0 auto;
+        text-align: left;
+        display: flex;
+        gap: 15px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .votes, .answers, .views {
+        margin-bottom: 0;
+    }
+    
+    .count {
+        display: inline;
+        font-size: 14px;
+        margin-right: 3px;
+    }
+    
+    .label {
+        display: inline;
+    }
+    
+    .question-meta {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        padding-right: 0;
+    }
+    
+    .search-container {
+        display: none;
+    }
+    
+    .user-controls {
+        margin-left: auto;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+    }
+    
+    .footer-nav-column {
+        min-width: 100%;
+    }
+}

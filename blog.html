@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datta Sable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/LOGO.png" alt="Site Logo">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-container">
+                <form class="search-form">
+                    <div class="search-input-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search..." class="search-input">
+                    </div>
+                </form>
+            </div>
+
+            <div class="user-controls">
+                <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> Log in</a>
+                <a href="#" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Sign up</a>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-list"></i> Questions</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i> Tags</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Jobs</a></li>
+                    </ul>
+                </nav>
+            </aside>
+    <title>Blog - Stack Overflow</title>
+    <style>
+        /* Stack Overflow's color scheme */
+        :root {
+            --white: #ffffff;
+            --black: #0c0d0e;
+            --orange: #f48024;
+            --blue: #0077cc;
+            --light-blue: #e1ecf4;
+            --dark-blue: #2b2d6e;
+            --gray: #6a737c;
+            --light-gray: #e4e6e8;
+            --dark-gray: #3b4045;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: var(--black);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9f9;
+        }
+        
+        .container {
+            max-width: 1264px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .main-content {
+            width: 70%;
+            padding: 24px;
+        }
+        
+        .sidebar {
+            width: 30%;
+            padding: 24px;
+        }
+        
+        .blog-header {
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .blog-header h1 {
+            font-size: 27px;
+            font-weight: 400;
+            margin: 0 0 16px 0;
+        }
+        
+        .blog-filter {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .blog-filter a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .blog-filter a.active {
+            color: var(--orange);
+        }
+        
+        .blog-post {
+            display: flex;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .blog-post:last-child {
+            border-bottom: none;
+        }
+        
+        .blog-post-image {
+            width: 200px;
+            height: 120px;
+            background-color: var(--light-gray);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .blog-post-content {
+            flex-grow: 1;
+        }
+        
+        .blog-post-title {
+            font-size: 20px;
+            margin: 0 0 8px 0;
+        }
+        
+        .blog-post-title a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+        
+        .blog-post-meta {
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .blog-post-excerpt {
+            margin-bottom: 12px;
+        }
+        
+        .blog-post-tags {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .blog-post-tag {
+            background-color: var(--light-blue);
+            color: var(--blue);
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        
+        .sidebar-widget {
+            background-color: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: 3px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar-widget-header {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #fafafb;
+        }
+        
+        .sidebar-widget-content {
+            padding: 15px;
+        }
+        
+        .widget-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .widget-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .widget-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .widget-list a {
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="blog-header">
+                <h1>Blog</h1>
+                <div class="blog-filter">
+                    <a href="#" class="active">Latest</a>
+                    <a href="#">Featured</a>
+                    <a href="#">Most Viewed</a>
+                    <a href="#">Topics</a>
+                </div>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-post-image"></div>
+                <div class="blog-post-content">
+                    <h2 class="blog-post-title"><a href="single-blog.html">How to Center a Div Vertically and Horizontally in CSS</a></h2>
+                    <div class="blog-post-meta">Posted 2 days ago by John Doe</div>
+                    <div class="blog-post-excerpt">
+                        Learn the most effective methods to center elements in CSS, including flexbox, grid, and absolute positioning techniques that work across all modern browsers.
+                    </div>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">css</span>
+                        <span class="blog-post-tag">flexbox</span>
+                        <span class="blog-post-tag">layout</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-post-image"></div>
+                <div class="blog-post-content">
+                    <h2 class="blog-post-title"><a href="#">Understanding JavaScript Closures: A Practical Guide</a></h2>
+                    <div class="blog-post-meta">Posted 5 days ago by Jane Smith</div>
+                    <div class="blog-post-excerpt">
+                        Closures are a fundamental concept in JavaScript that every developer should understand. This guide explains closures with practical examples you can use in your projects.
+                    </div>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">javascript</span>
+                        <span class="blog-post-tag">closures</span>
+                        <span class="blog-post-tag">es6</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-post">
+                <div class="blog-post-image"></div>
+                <div class="blog-post-content">
+                    <h2 class="blog-post-title"><a href="#">10 Python Tricks You Should Know in 2023</a></h2>
+                    <div class="blog-post-meta">Posted 1 week ago by Alex Johnson</div>
+                    <div class="blog-post-excerpt">
+                        Python continues to evolve, and these 10 tricks will help you write more efficient and readable code. From walrus operator to f-strings, master these techniques today.
+                    </div>
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">python</span>
+                        <span class="blog-post-tag">tips</span>
+                        <span class="blog-post-tag">best-practices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="sidebar-widget">
+                <div class="sidebar-widget-header">Featured Posts</div>
+                <div class="sidebar-widget-content">
+                    <ul class="widget-list">
+                        <li><a href="#">The Complete Guide to React Hooks</a></li>
+                        <li><a href="#">TypeScript vs JavaScript: When to Use Each</a></li>
+                        <li><a href="#">Optimizing SQL Queries for Performance</a></li>
+                        <li><a href="#">CSS Grid vs Flexbox: Which to Choose?</a></li>
+                        <li><a href="#">Docker for Beginners: A Step-by-Step Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <div class="sidebar-widget-header">Popular Tags</div>
+                <div class="sidebar-widget-content">
+                    <div class="blog-post-tags">
+                        <span class="blog-post-tag">javascript</span>
+                        <span class="blog-post-tag">python</span>
+                        <span class="blog-post-tag">java</span>
+                        <span class="blog-post-tag">c#</span>
+                        <span class="blog-post-tag">php</span>
+                        <span class="blog-post-tag">html</span>
+                        <span class="blog-post-tag">css</span>
+                        <span class="blog-post-tag">react</span>
+                        <span class="blog-post-tag">angular</span>
+                        <span class="blog-post-tag">vue</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <div class="sidebar-widget-header">About the Blog</div>
+                <div class="sidebar-widget-content">
+                    <p>The Stack Overflow Blog shares interesting and useful content for the developer community, including tutorials, insights, and announcements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
